@@ -4,7 +4,6 @@ import Login from './components/login';
 import Register from './components/register';
 import TaskPage from './pages/taskPage';
 import { ToastContainer } from 'react-toastify';
-import 'bootstrap/dist/css/bootstrap.min.css';
 import AddedTasks from './components/addedTasks';
 import EditTasks from './components/editTasks';
 
