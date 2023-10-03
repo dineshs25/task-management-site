@@ -51,7 +51,7 @@ const TaskPage = () => {
             <Navbar id={id} />
             <div className='my-16 mx-16 rounded-2xl lg:h-[600px] h-[400px] bg-gray-50'>
                 <div className='w-8/12 mx-auto h-[100%]'>
-                    <h2 className='text-center text-indigo-500 py-4 '>Add New Task</h2>
+                    <h2 className='text-center text-indigo-500 py-4 font-semibold text-4xl'>Add New Task</h2>
 
                     <div className='w-full'>
                         <div className='mb-4'>

@@ -66,7 +66,8 @@ const AddedTasks = () => {
             await axios.put(`${server}/completed/${taskID}`, newTask, {
                 withCredentials: true,
             });
-            navigate(`/tasks/${id}`)
+            // navigate(`/tasks/${id}`)
+            window.location.reload();
             toast.success("task marked as completed");
         } catch (err) {
             toast.error(err.response.data.error);
@@ -78,12 +79,20 @@ const AddedTasks = () => {
     return (<>
         {!loading ? <div>
             <Navbar id={id} />
-            <div className='my-16 mx-16 rounded-2xl h-[600px] bg-gray-50'>
+            <div className='my-16 mx-16 rounded-2xl h-[600px] bg-gray-50 overflow-scroll'>
                 <div className=' mx-4 h-[100%] py-3'>
+                    <h2 className='text-center text-indigo-500 py-4 font-semibold text-4xl'>Add New Task</h2>
+
                     {tasks?.map((task, index) => (
                         <div key={index} className='flex content-center h-[60px] justify-between items-center my-2 border-2 px-6 rounded-lg border-indigo-500 align-middle'>
                             <p className='text-indigo-500 font-semibold mb-0'>{task.title}</p>
                             <div className='flex w-4/12 justify-between'>
+                                <Link
+                                    to={`/tasks/added-tasks/preview/${task._id}`}
+                                    className=' bg-blue-800 text-white py-2 px-4 rounded-lg no-underline'
+                                >
+                                    Preview
+                                </Link>
                                 <Link
                                     to={`/tasks/added-tasks/edit/${task._id}`}
                                     className=' bg-blue-800 text-white py-2 px-4 rounded-lg no-underline'

@@ -6,6 +6,7 @@ import TaskPage from './pages/taskPage';
 import { ToastContainer } from 'react-toastify';
 import AddedTasks from './components/addedTasks';
 import EditTasks from './components/editTasks';
+import Preview from './components/preview';
 
 
 
@@ -35,6 +36,9 @@ function App() {
           } />
           <Route path="/tasks/added-tasks/edit/:id" exact element={
             <EditTasks />
+          } />
+          <Route path="/tasks/added-tasks/preview/:id" exact element={
+            <Preview />
           } />
           <Route path='/register' exact element={<Register />} />
         </Routes>

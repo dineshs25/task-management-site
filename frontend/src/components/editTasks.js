@@ -51,7 +51,7 @@ const EditTasks = ({ taskID }) => {
             <Navbar id={id} />
             <div className='my-16 mx-16 rounded-2xl h-[600px] bg-gray-50'>
                 <div className='w-8/12 mx-auto h-[100%]'>
-                    <h2 className='text-center text-indigo-500 py-4'>Edit Task</h2>
+                    <h2 className='text-center text-indigo-500 py-4 font-semibold text-4xl'>Edit Task</h2>
 
 
                     <form onSubmit={updateTask}>
